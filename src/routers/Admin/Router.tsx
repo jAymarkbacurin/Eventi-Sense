@@ -7,6 +7,7 @@ import Venues from '../../pages/Admin/Venues';
 import Supplier from '../../pages/Admin/Supplier';
 import EventPlanner from '../../pages/Admin/EventPlanner';
 import SurveyResponse from '../../pages/Admin/SurveyResponse';
+import  Reports from '../../pages/Admin/Reports';
 
 const routes: RouteObject[] = [
   { path: '/Home', element: <Home /> },
@@ -16,7 +17,8 @@ const routes: RouteObject[] = [
   // {path : '/VenueDetails/:venueId', element: <VenueDetails/>}
   {path: '/Survey-Response', element: <SurveyResponse />},
   {path: '/Supplier', element: <Supplier />},
-  {path: '/Event-Planner', element: <EventPlanner />}
+  {path: '/Event-Planner', element: <EventPlanner />},
+  {path: '/Reports', element: <Reports />}
 ];
 
 export default routes;

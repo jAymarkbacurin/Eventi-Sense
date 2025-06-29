@@ -67,6 +67,9 @@ import UpdatePassword from '../pages/AuthForm/UpdatePassword';
 import PaymentBooking from '../pages/paymentbooking'
 import ReceiptViewer from '../components/payment/ReceiptViewer';
 import VerifyReceipt from '../components/payment/VerifyReceipt';
+import Auditlogs from '../pages/adminfeatures/auditlogs';
+import Archive from '../pages/adminfeatures/archived';
+import Backup from '../pages/adminfeatures/backuprestore'
 
 
 // Page Transition Animation Component
@@ -193,6 +196,9 @@ const AppRouter = () => {
           <Route path="/payment/:venueId/:bookingId" element={<PageTransition><PaymentBooking /></PageTransition>} />
 
         <Route path="/receipts/:receiptNumber" element={<PageTransition><ReceiptViewer /></PageTransition>} />
+        <Route path="/auditlogs" element={<PageTransition><Auditlogs/></PageTransition>} />
+        <Route path="/archived" element={<PageTransition><Archive/></PageTransition>} />
+        <Route path="/backup" element={<PageTransition><Backup/></PageTransition>} />
         
    
 <Route path="/verify/:receiptNumber" element={<VerifyReceipt />} />

@@ -16,6 +16,9 @@ import { AiOutlineQuestionCircle } from 'react-icons/ai';
 import { useUnreadMessages } from '../messenger/hooks/unreadMessage';
 import { getCurrentUser } from '../../api/utiilty/profiles';
 
+// Add this import at the top
+import { MdInsertChart } from 'react-icons/md';
+
 // Define route configuration for easy management
 const ROUTES = [
   {
@@ -45,18 +48,23 @@ const ROUTES = [
   },
   {
     path: "/Admin-Dashboard/Survey-Response",
-    name: "Survey-Response",
+    name: "Audit Logs",
     icon: TbReportAnalytics
   },
   {
     path: "/Admin-Dashboard/Settings",
-    name: "Settings",
+    name: "Archived",
     icon: IoSettingsOutline
   },
   {
     path: "/Admin-Dashboard/Support-Help",
-    name: "Support & Help",
+    name: "Backup and Restores",
     icon: AiOutlineQuestionCircle
+  },
+  {
+    path: "/Admin-Dashboard/Reports",
+    name: "Analytics & Reports",
+    icon: MdInsertChart
   }
 ];
 

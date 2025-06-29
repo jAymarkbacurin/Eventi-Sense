@@ -4,6 +4,8 @@ import supabase from '../../api/supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../assets/images/logoES.png';
 import { Link } from 'react-router-dom';
+// Add this import at the top with other imports
+import ReCAPTCHA from 'react-google-recaptcha';
 
 // Add function to record user activity
 const recordUserActivity = async (userId: string) => {
@@ -37,6 +39,8 @@ const recordUserLogout = async (userId: string) => {
   }
 };
 
+
+
 export default function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
   const [formData, setFormData] = useState({
@@ -50,6 +54,9 @@ export default function Auth() {
   const [messageType, setMessageType] = useState<'error' | 'success'>('error');
   const [redirect, setRedirect] = useState(false);
   const [userRole, setUserRole] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [showCaptchaError, setShowCaptchaError] = useState(false);
+
 
   // Fetch user role after successful sign-in
   useEffect(() => {
@@ -57,6 +64,10 @@ export default function Auth() {
       // Redirect logic is handled in the return statement
     }
   }, [redirect, userRole]);
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token);
+    setShowCaptchaError(false);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -144,6 +155,15 @@ export default function Auth() {
     e.preventDefault();
     setIsLoading(true);
     setMessage('');
+  
+    if (!captchaToken) {
+      setShowCaptchaError(true);
+      setMessageType('error');
+      setMessage('Please complete the captcha verification');
+      setIsLoading(false);
+      return;
+    }
+  
     try {
       const signUpData = {
         email: formData.email,
@@ -172,6 +192,7 @@ export default function Auth() {
       setIsLoading(false);
     }
   };
+  
   const toggleForm = () => {
     setMessage('');
     setIsSignUp(!isSignUp);
@@ -305,6 +326,19 @@ export default function Auth() {
               required
             />
           </div>
+          <div className="flex justify-center z-50">
+          <ReCAPTCHA
+            sitekey="6Lcn_kIrAAAAAML37dmAcBzcRKai-Tkw4HcvBysE"
+            onChange={handleCaptchaChange}
+            theme="dark"
+          />
+        </div>
+        {showCaptchaError && (
+          <p className="text-red-500 text-xs text-center">
+            Please complete the captcha verification
+          </p>
+        )}
+        
           <motion.button
             type="submit"
             className="w-full mt-6 text-white py-3 px-4 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 shadow-lg hover:shadow-xl disabled:opacity-70 transition-all duration-300"
