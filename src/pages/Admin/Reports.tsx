@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
+ XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
   PieChart, Pie, Cell, LineChart, Line, AreaChart, Area 
 } from 'recharts';
 
@@ -82,7 +82,7 @@ const Reports: React.FC = () => {
                 fill="#8884d8"
                 dataKey="value"
               >
-                {userDistributionData.map((entry, index) => (
+                {userDistributionData.map((_entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
               </Pie>

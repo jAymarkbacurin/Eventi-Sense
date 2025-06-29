@@ -8,7 +8,7 @@ interface CaptchaProps {
 const Captcha: React.FC<CaptchaProps> = ({ onValidate }) => {
   const [captchaText, setCaptchaText] = useState('');
   const [userInput, setUserInput] = useState('');
-  const [isValid, setIsValid] = useState(false);
+  const [_isValid, setIsValid] = useState(false);
 
   const generateCaptcha = () => {
     const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';

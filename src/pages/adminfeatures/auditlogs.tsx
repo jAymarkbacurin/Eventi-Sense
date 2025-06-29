@@ -24,7 +24,7 @@ const contentVariants = {
 
 export default function AuditLogs() {
   // Sample audit log data
-  const [auditLogs, setAuditLogs] = useState([
+  const [auditLogs, _setAuditLogs] = useState([
     { id: 1, username: 'john.doe', action: 'Updated event details', timestamp: '2025-05-21T09:42:11' },
     { id: 2, username: 'admin', action: 'Deleted user account', timestamp: '2025-05-21T08:30:45' },
     { id: 3, username: 'sarah.smith', action: 'Changed password', timestamp: '2025-05-20T16:22:33' },
