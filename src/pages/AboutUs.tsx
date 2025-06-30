@@ -41,7 +41,7 @@ function AboutUs() {
 
   // Full paragraph content
   const fullText = `
-    EventiSense was born from a shared vision between Jake Christon Agustin and Jeymark Bacurin, students at Data Center College of the Philippines, Baguio City. The journey began on August 12, 2024, when the duo recognized the complexity of event planning and the challenges faced by planners, suppliers, and venue managers in Baguio City. Inspired by the city's bustling event culture and its potential for growth, they aimed to create a solution that would revolutionize event management through technology.
+    EventiSense was born from a visio of Jeymark Bacurin, a student at Data Center College of the Philippines, Baguio City. The journey began on August 12, 2024, when the duo recognized the complexity of event planning and the challenges faced by planners, suppliers, and venue managers in Baguio City. Inspired by the city's bustling event culture and its potential for growth, they aimed to create a solution that would revolutionize event management through technology.
     Traditional event planning often involves juggling multiple tasks, coordinating with numerous stakeholders, and dealing with unforeseen complications. These challenges motivated the development of EventiSense—an integrated event management system designed to simplify processes, enhance coordination, and provide real-time support.
     With the integration of advanced technologies like AI-powered chatbots, comprehensive directories for venues and suppliers, and a user-friendly interface, EventiSense aims to be the ultimate tool for event organizers. 
     It doesn't just cater to the needs of the event planners but also ensures a seamless experience for venue managers, suppliers, and event participants.

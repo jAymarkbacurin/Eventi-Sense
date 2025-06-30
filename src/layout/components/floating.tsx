@@ -291,22 +291,20 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             <div className="flex flex-col items-center justify-center space-y-4 md:space-y-8 max-w-md">
               <div className="mb-2 md:mb-4 font-bonanova">
                 <h1 className="text-white text-xl md:text-3xl font-light tracking-wider">EVENTISENSE</h1>
-                <p className="text-gray-300 text-xs md:text-sm mt-1">HOTEL & SPA RESORT</p>
+           
               </div>
               <div className='font-sofia'>
-                <h2 className="text-white text-lg md:text-2xl font-light mb-4 md:mb-6">Hotel & Spa<br />Resort Eventisense</h2>
+                <h2 className="text-white text-lg md:text-2xl font-light mb-4 md:mb-6">Eventisense</h2>
                 <p className="text-gray-300 text-sm md:text-base">Baguio City</p>
-                <p className="text-gray-300 text-sm md:text-base">962 31 Sliač — Sielnica</p>
+                <p className="text-gray-300 text-sm md:text-base">Benguet</p>
                 <p className="text-gray-300 text-sm md:text-base">Philippines</p>
               </div>
               <div className="mt-4 md:mt-8">
                 <p className="text-gray-300 text-sm md:text-base mb-1 md:mb-2">+421 45 530 00 00</p>
                 <p className="text-gray-300 text-sm md:text-base mb-2 md:mb-4">Eventi@eventisense.com</p>
-                <div className="flex items-center justify-center text-sm md:text-base">
-                  <p className="text-gray-300">Contacts</p>
-                  <span className="text-gray-300 ml-2">→</span>
-                </div>
+              
               </div>
+              {/* Social Icons 
               <div className="flex space-x-4 md:space-x-6 mt-6 md:mt-12">
                 {['T', 'f', 'I', 'Y'].map((icon, index) => (
                   <div 
@@ -317,6 +315,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                   </div>
                 ))}
               </div>
+              */}
             </div>
           </section>
         </div>
